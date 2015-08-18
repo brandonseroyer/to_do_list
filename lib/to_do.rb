@@ -5,4 +5,8 @@ class Task
   define_method(:initialize) do |attributes|
     @description = attributes.fetch(:description)
   end
+
+  define_singleton_method(:all) do
+    tasks = []
+  end
 end
