@@ -10,3 +10,16 @@ get('/') do
   @tasks = Task.all()
   erb(:index)
 end
+
+# get('/success') do
+#   @tasks = Task.all()
+# end
+
+post('/success') do
+  @tasks = Task.all()
+  description = params.fetch('description')
+  new_task = Task.new({:description => description, :list_id => nil})
+  new_task.save()
+  erb(:index)
+
+end

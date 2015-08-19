@@ -19,7 +19,7 @@ class Task
   end
 
   define_method(:save) do
-    DB.exec("INSERT INTO tasks (description, id) VALUES ('#{@description}', '#{@list_id}')")
+    DB.exec("INSERT INTO tasks (description, id) VALUES ('#{@description}', 3);")
   end
 
   define_method(:==) do |another_task|
